@@ -1,0 +1,8 @@
+
+<table>
+    <tr *ngFor="let role of rolemapping">
+      <td>{{role.role_name}}  :</td>&nbsp;&nbsp;
+      <td>{{role.urls}}</td>&nbsp;&nbsp;
+      <a [routerLink]="['update-url/'+role.role_name]">UpdateUrls</a>
+    </tr>
+  </table>

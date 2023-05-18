@@ -1,0 +1,19 @@
+<p>role-permission works!</p>
+<form [formGroup]="roleForm" (ngSubmit)="submitForm()" novalidate>
+    <div>
+        <select formControlName="role_id">
+        <option>Select role</option>
+        <option *ngFor="let role of roles" value="{{role.role_id}}">
+        {{ role.role_name}}
+        </option>
+      </select>
+    </div>
+    <div *ngFor="let url of urls; let i=index">
+      <label>
+        <input type="checkbox" [value]="url.url" (change)="onCheckboxChange($event)" />
+        {{url.url}}
+      </label>
+    </div>
+    <input type="submit" value="Submit">
+  </form>	
+  

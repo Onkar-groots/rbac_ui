@@ -1,0 +1,15 @@
+
+<form [formGroup]="Form"  (submit)="onsubmit()" novalidate>
+    <label for="Id">Role Name :</label><br>
+    <input type="text"  formControlName="role_name" value="role_name"><br>
+    <label for="Username">Urls</label><br>
+    <input type="text"  formControlName="urls"><br>
+    <label>Urls for modify</label><br>
+    <div *ngFor="let url of urls; let i=index">
+        <label>
+          <input type="checkbox" [value]="url.url" (change)="onCheckboxChange($event)" />
+          {{url.url}}
+        </label>
+      </div>
+    <input type="submit" value="Submit">
+</form>

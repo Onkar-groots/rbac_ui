@@ -1,0 +1,24 @@
+<form [formGroup]="registerForm" (submit)="onSubmit()">
+    <div>
+      <label>
+        Name:
+        <input formControlName="username" placeholder="Your name">
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        Email:
+        <input formControlName="email" placeholder="Your email">
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        Password:
+        <input formControlName="password" placeholder="Your Password">
+      </label>
+    </div>
+    <br>
+    &nbsp;<button type="submit">submit</button>
+  </form>

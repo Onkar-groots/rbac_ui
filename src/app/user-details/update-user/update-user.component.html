@@ -1,0 +1,40 @@
+<!-- <form [formGroup]="UpdateForm">
+    <br><br>
+    User_id :
+    <input type="text" formControlName="userid">
+    <br><br>
+    Username :
+    <input type="text" formControlName="username">
+    <br><br>
+    Email :
+    <input type="text" formControlName="email">
+    <br><br>
+    Role Name :
+    <input type="text" formControlName="role_name">
+    <br><br>
+    Organisation Name :
+    <input type="text" formControlName="org_name">
+    <br><br>
+    <select>
+        <option>select role</option>
+        <option *ngFor="let role of roles">{{role.role_name}}</option>
+    </select>
+    <button type="submit">submit</button>
+    <!-- <a (click)="setData()">setvalue</a> -
+</form> -->
+
+<form [formGroup]="UpdateForm"  (submit)="onsubmit()">
+    <label for="Id">UserID</label><br>
+    <input  readonly type="text" id="fname" formControlName="userid"><br>
+    <label for="Username">Username</label><br>
+    <input readonly type="text" id="lname" formControlName="username"><br>
+    <label for="email">email</label><br>
+    <input readonly type="text" id="lname" formControlName="email"><br>
+    <label for="Role Name">Role Name</label><br>
+    <input readonly type="text" id="lname" formControlName="role_name"><br>
+    <select formControlName="update_role">
+        <option>select role</option>
+        <option *ngFor="let role of roles" value="{{role.role_id}}">{{role.role_name}}</option>
+    </select><br><br>
+    <input type="submit" value="Submit">
+</form>

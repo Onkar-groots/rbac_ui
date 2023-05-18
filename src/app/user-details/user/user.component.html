@@ -1,0 +1,11 @@
+<table>
+    <tr *ngFor="let user of users">
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.role_name}}</td>
+      <td>{{user.org_name}}</td>
+      <a [routerLink]="['update-user/'+user.user_id]">update-role</a>
+    </tr>
+  </table>
+  
+  <router-outlet></router-outlet>
